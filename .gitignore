@@ -1,0 +1,11 @@
+# Data files (generated at runtime)
+data/
+*.log
+*.json
+
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/

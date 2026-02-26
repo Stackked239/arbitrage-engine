@@ -1,0 +1,8 @@
+# Arbitrage Engine — Python Dependencies
+flask>=3.0
+requests>=2.31
+gunicorn>=21.2
+
+# optional, used only if you run the Jupyter analysis notebook
+# pandas>=2.0
+# numpy>=1.26

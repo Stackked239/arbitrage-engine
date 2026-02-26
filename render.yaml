@@ -1,0 +1,17 @@
+# render.yaml — Render Blueprint
+# Deploys the Arbitrage Engine as a web service on Render.
+
+services:
+  - type: web
+    name: arbitrage-engine
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn web:app --bind 0.0.0.0:$PORT --workers 2 --timeout 120
+    envVars:
+      - key: DATA_DIR
+        value: /tmp/arbitrage_data
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    healthCheckPath: /health
+    autoDeploy: true
+    plan: free
